@@ -1,0 +1,25 @@
+image: Node16
+
+branches:
+  only:
+    - main
+
+install:
+  - yarn install
+
+test:
+  script:
+    - yarn run lint
+
+build:
+  script:
+    - yarn run build
+
+deploy:
+  script:
+    - git config --global credential.helper store
+    - git config --global user.name Widle CI
+    - git config --global user.email ci@widle.dev
+    - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > "$HOME/.git-credentials"
+    - npx push-dir --dir=dist --branch=gh-pages --force --verbose
+    
