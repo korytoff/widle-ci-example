@@ -13,7 +13,7 @@ test:
 
 build:
   script:
-    - yarn run build
+    - yarn build
 
 deploy:
   script:
@@ -22,4 +22,3 @@ deploy:
     - git config --global user.email ci@widle.dev
     - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > "$HOME/.git-credentials"
     - npx push-dir --dir=dist --branch=gh-pages --force --verbose
-    

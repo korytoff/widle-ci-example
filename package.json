@@ -1,0 +1,30 @@
+{
+  "name": "widle-ci-example",
+  "version": "0.9.0",
+  "description": "",
+  "private": "true",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "lint": "eslint",
+    "test": "echo \"Tests passed!\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/korytoff/widle-ci-example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/korytoff/widle-ci-example/issues"
+  },
+  "homepage": "https://github.com/korytoff/widle-ci-example#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^8.12.0",
+    "html-webpack-plugin": "^5.5.0",
+    "push-dir": "^0.4.1",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
